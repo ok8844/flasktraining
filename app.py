@@ -17,9 +17,6 @@ api = Api(app)
 app.secret_key = "abc"
 jwt = JWT(app, authenticate, identity)
 
-@app.before_first_request
-def create_table():
-	db.create_all()
 
 
 
